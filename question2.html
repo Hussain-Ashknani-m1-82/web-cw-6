@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>فردي أم زوجي؟ 🥴</title>
-  </head>
-  <body>
-    <!-- السؤال الثاني -->
-    <h2 id="numberType"></h2>
-    <div class="center">
-      <input
-        dir="rtl"
-        type="text"
-        placeholder="أدخل العدد"
-        id="height"
-        style="text-align: center; font-size: 1rem; margin: 0.4rem"
-      />
-    </div>
-    <div class="center">
-      <button onclick="">اختبر 🤓</button>
-    </div>
-    <script>
-      // قم بإنشاء الدالة هنا
-      // numberType << idقم بإظهار النتيجة النهائية باستخدام ال
-      // لا تنسى مناداة الدالة عند الضغط على الزر
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>فردي أم زوجي؟ 🥴</title>
+</head>
+
+<body>
+  <!-- السؤال الثاني -->
+  <h2 id="numberType"></h2>
+  <div class="center">
+    <input dir="rtl" type="text" placeholder="أدخل العدد" id="height"
+      style="text-align: center; font-size: 1rem; margin: 0.4rem" />
+  </div>
+  <div class="center">
+    <button onclick="check()">اختبر </button>
+  </div>
+
+  <script>
+    function check() {
+      let numbe = document.getElementById('height').value
+
+      if ((numbe % 2) == 0) {
+        document.getElementById('numberType').innerHTML =
+          numbe + " هو عدد زوجي";
+      } else {
+        document.getElementById('numberType').innerHTML =
+          numbe + " هو عدد فردي";
+      }
+    }
+  </script>
+
+</body>
+
 </html>
